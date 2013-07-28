@@ -10,7 +10,7 @@ namespace UnitTests.Commands.CreateUserCommand
 		public void CreateUserNotify()
 		{
 			// Act
-			var commandHandler = new CreateUserNotificationCommandHandler();
+			CreateUserNotificationCommandHandler commandHandler = new CreateUserNotificationCommandHandler();
 			commandHandler.Execute(new DataModel.Commands.CreateUserCommand("User1", "User1", "user1@email.com"));
 
 

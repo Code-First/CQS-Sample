@@ -13,14 +13,14 @@ namespace TestApp
 		private static void Main(string[] args)
 		{
 			// Getting the factories
-			var queryFactory = Container.Current.Resolve<IQueryFactory>();
-			var commandsFactory = Container.Current.Resolve<ICommandsFactory>();
+			IQueryFactory queryFactory = Container.Current.Resolve<IQueryFactory>();
+			ICommandsFactory commandsFactory = Container.Current.Resolve<ICommandsFactory>();
 
 
 			// Executing commands
 			Console.WriteLine("Crating new user...");
 
-			var createUserCommand = new CreateUserCommand(
+			CreateUserCommand createUserCommand = new CreateUserCommand(
 				Guid.NewGuid().ToString().ToUpperInvariant().Replace("-", "").Substring(0, 6),
 				Guid.NewGuid().ToString().ToUpperInvariant().Replace("-", "").Substring(0, 6),
 				Guid.NewGuid().ToString().ToUpperInvariant().Replace("-", "").Substring(0, 6) + "@email.com");

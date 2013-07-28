@@ -23,7 +23,7 @@ namespace EFDataAccess.Commands
 			Debug.WriteLine("CreateUserCommandHandler executed");
 
 			int id = DbContext.Users.Any() == false ? 1 : DbContext.Users.Max(x => x.Id) + 1;
-			var user = new User
+			User user = new User
 			{
 				Id = id,
 				FirstName = command.FirstName,

@@ -23,7 +23,7 @@ namespace UnitTests.Commands.CreateUserCommand
 
 
 			// Act
-			var commandHandler = new CreateUserCommandHandler(dbContext);
+			CreateUserCommandHandler commandHandler = new CreateUserCommandHandler(dbContext);
 			commandHandler.Execute(new DataModel.Commands.CreateUserCommand("User1", "User1", "user1@email.com"));
 
 

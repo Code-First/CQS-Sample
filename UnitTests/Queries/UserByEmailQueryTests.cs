@@ -31,7 +31,7 @@ namespace UnitTests.Queries
 			// Act
 			User userToSearch = users.Skip(1).First();
 
-			var query = new UserByEmailQuery(dbContext);
+			UserByEmailQuery query = new UserByEmailQuery(dbContext);
 			User result = query.Execute(userToSearch.Email);
 
 
@@ -61,7 +61,7 @@ namespace UnitTests.Queries
 
 
 			// Act
-			var query = new UserByEmailQuery(dbContext);
+			UserByEmailQuery query = new UserByEmailQuery(dbContext);
 			User result = query.Execute("user4@email.com");
 
 

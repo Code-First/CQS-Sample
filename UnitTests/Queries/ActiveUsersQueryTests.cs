@@ -29,7 +29,7 @@ namespace UnitTests.Queries
 
 
 			// Act
-			var query = new ActiveUsersQuery(dbContext);
+			ActiveUsersQuery query = new ActiveUsersQuery(dbContext);
 			IEnumerable<User> result = query.Execute();
 
 
@@ -54,7 +54,7 @@ namespace UnitTests.Queries
 
 
 			// Act
-			var query = new ActiveUsersQuery(dbContext);
+			ActiveUsersQuery query = new ActiveUsersQuery(dbContext);
 			IEnumerable<User> result = query.Execute();
 
 
@@ -79,7 +79,7 @@ namespace UnitTests.Queries
 
 
 			// Act
-			var query = new ActiveUsersQuery(dbContext);
+			ActiveUsersQuery query = new ActiveUsersQuery(dbContext);
 			IEnumerable<User> result = query.Execute();
 
 

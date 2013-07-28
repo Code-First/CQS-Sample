@@ -23,7 +23,7 @@ namespace DataModel.Core
 
 			if ((commandHandlers != null) && commandHandlers.Any())
 			{
-				foreach (var commandHandler in commandHandlers)
+				foreach (ICommandHandler<T> commandHandler in commandHandlers)
 				{
 					// Execute command
 					commandHandler.Execute(command);
