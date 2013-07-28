@@ -53,9 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Commands\CreateUserCommandHandler.cs" />
+    <Compile Include="Core\EFCommandHandlerBase.cs" />
     <Compile Include="Core\EFQueryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\ActiveUsersQuery.cs" />
+    <Compile Include="Queries\InactiveUsersQuery.cs" />
     <Compile Include="Queries\UserByEmailQuery.cs" />
   </ItemGroup>
   <ItemGroup>

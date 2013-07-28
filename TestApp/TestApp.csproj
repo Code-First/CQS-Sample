@@ -72,6 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CreateUserNotificationCommandHandler.cs" />
     <Compile Include="IoC\Configuration.cs" />
     <Compile Include="IoC\Container.cs" />
     <Compile Include="Program.cs" />

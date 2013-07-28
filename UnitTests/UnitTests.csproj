@@ -58,8 +58,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Commands\CreateUserCommand\CreateUserNotificationCommandHandlerTests.cs" />
+    <Compile Include="Commands\CreateUserCommand\CreateUserCommandHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\ActiveUsersQueryTests.cs" />
+    <Compile Include="Queries\InactiveUsersQueryTests.cs" />
     <Compile Include="Queries\UserByEmailQueryTests.cs" />
     <Compile Include="Utils\EntityFramework\DbContextUtils.cs" />
     <Compile Include="Utils\EntityFramework\DbSetMock.cs" />
@@ -76,6 +79,10 @@
     <ProjectReference Include="..\DataModel\DataModel.csproj">
       <Project>{dcea425c-0246-44f7-9af3-e069d75f1df6}</Project>
       <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestApp\TestApp.csproj">
+      <Project>{88888ac4-bcb8-432c-bd9a-34d6247348bd}</Project>
+      <Name>TestApp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

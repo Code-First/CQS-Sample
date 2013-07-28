@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Ninject;
 
 namespace TestApp.IoC
@@ -39,6 +41,22 @@ namespace TestApp.IoC
 				Configure();
 
 			return _container.Get(type);
+		}
+
+		public IEnumerable<T> ResolveAll<T>()
+		{
+			if (_container == null)
+				Configure();
+
+			return _container.GetAll<T>();
+		}
+
+		public IEnumerable<object> ResolveAll(Type type)
+		{
+			if (_container == null)
+				Configure();
+
+			return _container.GetAll(type).ToArray();
 		}
 	}
 }
